@@ -1,468 +1,171 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Mahathi Somisetty — MERN Stack Developer</title>
-    <style>
-      :root {
-        --accent: #6ee7b7;
-        --accent-2: #60a5fa;
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahathi Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-        --bg-dark: linear-gradient(135deg, #0f172a, #1e293b, #0b1220);
-        --bg-light: linear-gradient(135deg, #f0f9ff, #e0f2fe);
-        --card-dark: rgba(15, 23, 42, 0.6);
-        --card-light: rgba(255, 255, 255, 0.8);
-        --text-dark: #e6eef6;
-        --text-light: #111827;
-        --muted-dark: #9aa4b2;
-        --muted-light: #6b7280;
-        --radius: 14px;
-        font-family: "Inter", system-ui, sans-serif;
-      }
+<body>
 
-      [data-theme="dark"] {
-        --bg: var(--bg-dark);
-        --card: var(--card-dark);
-        --text: var(--text-dark);
-        --muted: var(--muted-dark);
-      }
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">Mahathi </div>
 
-      [data-theme="light"] {
-        --bg: var(--bg-light);
-        --card: var(--card-light);
-        --text: var(--text-light);
-        --muted: var(--muted-light);
-      }
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-      body {
-        margin: 0;
-        min-height: 100vh;
-        background: var(--bg);
-        background-attachment: fixed;
-        color: var(--text);
-        transition: background 0.5s, color 0.5s;
-        line-height: 1.6;
-      }
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <div class="hero-left">
+      <p class="tag">Hi! I am</p>
 
-      .container {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 32px 20px;
-      }
+      <h1 class="title">Mahathi Somisetty</h1>
+      <h2 class="subtitle">Frontend Developer • MERN Stack Developer</h2>
 
-      header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 20px;
-        padding-bottom: 16px;
-      }
+      <p class="desc">
+        I build responsive, user-friendly websites using HTML, CSS, JavaScript,
+        React, Node.js, Express and MongoDB.
+      </p>
 
-      .brand {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-      }
-
-      .logo {
-        width: 56px;
-        height: 56px;
-        border-radius: 12px;
-        background: linear-gradient(135deg, var(--accent), var(--accent-2));
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 800;
-        font-size: 20px;
-        color: #012;
-        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
-      }
-
-      nav {
-        display: flex;
-        gap: 18px;
-        flex-wrap: wrap;
-      }
-
-      nav a {
-        color: var(--muted);
-        text-decoration: none;
-        font-weight: 600;
-        transition: color 0.3s;
-      }
-
-      nav a:hover {
-        color: var(--accent);
-      }
-
-      .theme-toggle {
-        background: none;
-        border: none;
-        font-size: 22px;
-        color: var(--text);
-        cursor: pointer;
-        transition: transform 0.3s ease;
-      }
-
-      .theme-toggle:hover {
-        transform: rotate(20deg);
-      }
-
-      hr {
-        border: 0.5px solid rgba(255, 255, 255, 0.15);
-        margin: 20px 0;
-      }
-
-      /* ---------- HERO ---------- */
-      .hero {
-        text-align: center;
-        padding: 60px 20px;
-      }
-
-      .card {
-        background: var(--card);
-        backdrop-filter: blur(12px);
-        border-radius: var(--radius);
-        padding: 40px;
-        border: 1px solid rgba(255, 255, 255, 0.15);
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-      }
-
-      .intro h1 {
-        font-size: 34px;
-        margin-bottom: 12px;
-      }
-
-      .intro p {
-        color: var(--muted);
-        max-width: 700px;
-        margin: 0 auto 24px;
-      }
-
-      .cta {
-        display: flex;
-        justify-content: center;
-        gap: 14px;
-        flex-wrap: wrap;
-        margin-top: 10px;
-      }
-
-      .btn {
-        padding: 10px 18px;
-        border-radius: 10px;
-        background: linear-gradient(90deg, var(--accent), var(--accent-2));
-        color: #0b1220;
-        border: none;
-        font-weight: 700;
-        cursor: pointer;
-        text-decoration: none;
-        transition: transform 0.3s ease;
-      }
-
-      .btn:hover {
-        transform: translateY(-3px);
-      }
-
-      .btn.secondary {
-        background: transparent;
-        color: var(--accent);
-        border: 1px solid var(--accent);
-      }
-
-      section {
-        margin-top: 50px;
-      }
-
-      h2.section-title {
-        text-align: center;
-        font-size: 24px;
-        margin-bottom: 20px;
-      }
-
-      .about p {
-        color: var(--muted);
-        text-align: center;
-        max-width: 800px;
-        margin: 0 auto;
-      }
-
-      /* ---------- SKILLS ---------- */
-      .skills {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 16px;
-        margin-top: 24px;
-      }
-
-      .skill {
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: 12px;
-        padding: 12px 16px;
-        font-weight: 700;
-        text-align: center;
-        min-width: 140px;
-      }
-
-      .skill small {
-        display: block;
-        color: var(--muted);
-        font-weight: 500;
-        margin-top: 4px;
-      }
-
-      /* ---------- PROJECTS ---------- */
-      .projects-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 20px;
-      }
-
-      .project img {
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-        border-radius: 12px 12px 0 0;
-      }
-
-      .p-body {
-        padding: 16px;
-      }
-
-      .tags {
-        display: flex;
-        gap: 8px;
-        flex-wrap: wrap;
-        margin-top: 10px;
-      }
-
-      .tag {
-        background: rgba(255, 255, 255, 0.07);
-        padding: 6px 10px;
-        border-radius: 8px;
-        font-size: 13px;
-        color: var(--muted);
-      }
-
-      /* ---------- EXPERIENCE ---------- */
-      .timeline {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        max-width: 800px;
-        margin: 0 auto;
-      }
-
-      .exp {
-        background: rgba(255, 255, 255, 0.04);
-        padding: 16px;
-        border-radius: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-      }
-
-      .exp h4 {
-        margin: 0 0 4px;
-      }
-
-      .exp span {
-        font-size: 13px;
-        color: var(--muted);
-      }
-
-      /* ---------- CONTACT ---------- */
-      #contact form {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        max-width: 500px;
-        margin: 0 auto;
-      }
-
-      #contact input,
-      #contact textarea {
-        width: 100%;
-        padding: 12px;
-        border-radius: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        background: rgba(0, 0, 0, 0.2);
-        color: var(--text);
-        font-size: 15px;
-        outline: none;
-      }
-
-      #contact input:focus,
-      #contact textarea:focus {
-        border-color: var(--accent);
-      }
-
-      .footer {
-        margin-top: 60px;
-        text-align: center;
-        color: var(--muted);
-        font-size: 14px;
-        padding: 20px;
-      }
-
-      @media (max-width: 700px) {
-        .intro h1 {
-          font-size: 26px;
-        }
-      }
-    </style>
-  </head>
-
-  <body data-theme="dark">
-    <div class="container">
-      <header>
-        <div class="brand">
-          <div class="logo">MS</div>
-          <div>
-            <div style="font-weight:700;font-size:18px;">Mahathi Somisetty</div>
-            <div style="font-size:13px;color:var(--muted)">Full Stack Developer</div>
-          </div>
-        </div>
-        <nav>
-          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">🌙</button>
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#experience">Experience</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </header>
-
-      <hr />
-
-      <main>
-        <section class="hero">
-          <div class="card intro">
-            <h1>Hi, I'm Mahathi Somisetty — Full Stack Developer</h1>
-            <p>
-              I build fast, accessible, and scalable web applications using MongoDB, Express,
-              React, and Node.js. I love crafting clean UIs, improving performance, and creating
-              a great developer experience.
-            </p>
-            <div class="cta">
-              <a
-                href="https://drive.google.com/drive/u/0/folders/1wc7zTUQ91Gyc9dCYAdvuYTujfpJv4Gpl"
-                class="btn"
-                target="_blank"
-                >Download CV</a
-              >
-              <button class="btn secondary" id="get-in-touch">Get in touch</button>
-            </div>
-          </div>
-        </section>
-
-        <section id="about">
-          <h2 class="section-title">About Me</h2>
-          <div class="about card">
-            <p>
-              I'm a passionate full-stack developer focused on building modern, reliable, and
-              efficient web applications. I graduated in 2022 and am seeking opportunities to
-              contribute to impactful projects and grow with a talented team.
-            </p>
-          </div>
-        </section>
-
-        <section>
-          <h2 class="section-title">Skills</h2>
-          <div class="skills">
-            <div class="skill">React<small>Hooks · Router · Context</small></div>
-            <div class="skill">Node.js<small>Express · REST · JWT</small></div>
-            <div class="skill">MongoDB<small>Mongoose · Aggregation</small></div>
-            <div class="skill">CSS / UI<small>Flexbox · Grid · Responsive</small></div>
-            <div class="skill">Tools<small>VS Code · Git · Postman</small></div>
-          </div>
-        </section>
-
-        <section id="projects">
-          <h2 class="section-title">Projects</h2>
-          <div class="projects-grid">
-            <article class="project card">
-              <img
-                src="https://via.placeholder.com/900x400.png?text=E-commerce+Dashboard"
-                alt="E-commerce Dashboard"
-              />
-              <div class="p-body">
-                <h3>E-commerce Dashboard</h3>
-                <p style="color:var(--muted)">
-                  Admin dashboard with analytics, role-based auth, and real-time updates using
-                  Socket.io.
-                </p>
-                <div class="tags">
-                  <div class="tag">React</div>
-                  <div class="tag">Node.js</div>
-                  <div class="tag">MongoDB</div>
-                </div>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section id="experience">
-          <h2 class="section-title">Experience</h2>
-          <div class="timeline">
-            <div class="exp">
-              <h4>Frontend Intern — Bright Labs</h4>
-              <span>Jun 2023 — Dec 2023 · Remote</span>
-              <p style="color:var(--muted)">
-                Developed reusable React components, improved accessibility, and reduced bundle
-                size by 25%.
-              </p>
-            </div>
-            <div class="exp">
-              <h4>Fullstack Project — Personal</h4>
-              <span>Jan 2024 — Present</span>
-              <p style="color:var(--muted)">
-                Building a real-time collaborative note-taking app using WebSockets and MongoDB
-                change streams.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section id="contact">
-          <h2 class="section-title">Contact</h2>
-          <div class="card">
-            <form id="contact-form">
-              <input id="name" type="text" placeholder="Your name" required />
-              <input id="email" type="email" placeholder="Your email" required />
-              <textarea id="message" placeholder="Your message" rows="4" required></textarea>
-              <button class="btn" type="submit">Send message</button>
-            </form>
-          </div>
-        </section>
-      </main>
-
-      <hr />
-      <footer class="footer">© 2025 Mahathi Somisetty</footer>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn primary">Contact Me</a>
+        <a href="#projects" class="btn outline">View Projects</a>
+      </div>
     </div>
 
-    <script>
-      const toggleBtn = document.getElementById("theme-toggle");
-      toggleBtn.addEventListener("click", () => {
-        const body = document.body;
-        const isDark = body.getAttribute("data-theme") === "dark";
-        body.setAttribute("data-theme", isDark ? "light" : "dark");
-        toggleBtn.textContent = isDark ? "🌞" : "🌙";
-      });
+    <div class="hero-right">
+      <div class="avatar">MS</div>
+      <p class="role">Full Stack Developer</p>
+    </div>
+  </section>
 
-      document.getElementById("get-in-touch").addEventListener("click", () => {
-        document.querySelector("#contact").scrollIntoView({ behavior: "smooth" });
-      });
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <h3 class="label">Introduction</h3>
+    <h2 class="section-title">About Me</h2>
 
-      document.getElementById("contact-form").addEventListener("submit", (e) => {
-        e.preventDefault();
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const message = document.getElementById("message").value;
-        const mailtoLink = `mailto:mahathisomisetty777@gmail.com?subject=Message from ${encodeURIComponent(
-          name
-        )}&body=${encodeURIComponent(message)}%0A%0AFrom: ${encodeURIComponent(email)}`;
-        window.location.href = mailtoLink;
-      });
-    </script>
-  </body>
+    <div class="about-grid">
+      <div>
+        <p>
+          I am a MERN Stack developer passionate about creating full-stack web applications
+          with modern UI and clean code.
+        </p>
+        <p>
+          I enjoy building frontend interfaces and connecting them with backends using
+          APIs, authentication and database systems.
+        </p>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h4>Skills</h4>
+          <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>React, Redux Toolkit</li>
+            <li>Node.js, Express</li>
+            <li>MongoDB, REST APIs</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h4>Languages</h4>
+          <ul>
+            <li>English</li>
+            <li>Telugu</li>
+            <li>Hindi</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h4>Interests</h4>
+          <ul>
+            <li>Full Stack Projects</li>
+            <li>Learning new tech</li>
+            <li>UI/UX Designs</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section alt">
+    <h3 class="label">What I Do</h3>
+    <h2 class="section-title">My Services</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h4>Frontend Development</h4>
+        <p>Responsive interfaces using HTML, CSS & JavaScript.</p>
+      </div>
+
+      <div class="card">
+        <h4>Full Stack Web Apps</h4>
+        <p>MERN-based applications with authentication.</p>
+      </div>
+
+      <div class="card">
+        <h4>API Development</h4>
+        <p>Build secure REST APIs with Node.js + Express.</p>
+      </div>
+
+      <div class="card">
+        <h4>UI Integration</h4>
+        <p>Connecting frontend to backend using APIs.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <h3 class="label">Portfolio</h3>
+    <h2 class="section-title">My Projects</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h4>Job Finder App</h4>
+        <p>React, Node.js, Express, MongoDB</p>
+      </div>
+
+      <div class="card">
+        <h4>Student Management System</h4>
+        <p>React & RTK Query</p>
+      </div>
+
+      <div class="card">
+        <h4>Portfolio Website</h4>
+        <p>HTML • CSS • JavaScript</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section alt">
+    <h3 class="label">Connect</h3>
+    <h2 class="section-title">Contact Me</h2>
+
+    <div class="contact-box">
+      <form>
+        <input type="text" placeholder="Your Name" class="input" required>
+        <input type="email" placeholder="Your Email" class="input" required>
+        <textarea placeholder="Your Message" rows="4" class="input" required></textarea>
+        <button class="btn primary full">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 Mahathi • All Rights Reserved</p>
+  </footer>
+
+</body>
 </html>
