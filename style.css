@@ -1,5 +1,11 @@
-/* RESET */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+/* ================================
+   GLOBAL RESET
+================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   font-family: "Poppins", sans-serif;
@@ -8,7 +14,10 @@ body {
   transition: 0.3s ease-in-out;
 }
 
-/* DARK + LIGHT THEMES */
+
+/* ================================
+   THEME VARIABLES
+================================= */
 :root {
   --accent: #4cc9f0;
 
@@ -17,14 +26,14 @@ body {
   --text: #ffffff;
   --text-light: #dcdcdc;
 
-  --card-bg: rgba(255,255,255,0.07);
-  --card-border: rgba(255,255,255,0.15);
+  --card-bg: rgba(255, 255, 255, 0.07);
+  --card-border: rgba(255, 255, 255, 0.15);
 
-  --nav-bg: rgba(10,10,10,0.8);
+  --nav-bg: rgba(10, 10, 10, 0.8);
   --nav-border: #222;
 }
 
-/* BEAUTIFUL LIGHT THEME */
+/* LIGHT THEME */
 .light {
   --bg: #f2f2f7;
   --text: #1a1a1a;
@@ -33,11 +42,14 @@ body {
   --card-bg: #ffffff;
   --card-border: #d8d8d8;
 
-  --nav-bg: rgba(255,255,255,0.85);
+  --nav-bg: rgba(255, 255, 255, 0.85);
   --nav-border: #cccccc;
 }
 
-/* NAVBAR */
+
+/* ================================
+   NAVBAR
+================================= */
 .navbar {
   padding: 18px 60px;
   background: var(--nav-bg);
@@ -51,7 +63,7 @@ body {
   z-index: 1000;
 }
 
-.logo { 
+.logo {
   font-size: 24px;
   font-weight: bold;
   color: var(--text);
@@ -78,33 +90,94 @@ body {
   color: var(--text);
 }
 
-/* HERO */
+
+/* ================================
+   MOBILE NAVBAR
+================================= */
+.mobile-menu-icon {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: var(--text);
+}
+
+/* Slide-in Side Menu */
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 70%;
+  height: 100vh;
+  background: #ffe8e6;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  transition: 0.4s ease;
+  z-index: 2000;
+}
+
+.mobile-nav a {
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.close-btn {
+  align-self: flex-end;
+  font-size: 28px;
+  cursor: pointer;
+  color: #ff4e4e;
+  margin-bottom: 20px;
+}
+
+/* Show hamburger & hide desktop nav */
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+  .mobile-menu-icon {
+    display: block;
+  }
+}
+
+
+/* ================================
+   HERO SECTION
+================================= */
 .hero {
   padding: 120px 60px;
 }
 
-.tag { color: var(--text-light); letter-spacing: 3px; }
-
-.title { 
-  font-size: 48px; 
-  font-weight: 700; 
-  margin-top: 15px; 
+.tag {
+  color: var(--text-light);
+  letter-spacing: 3px;
 }
 
-.subtitle { 
-  color: var(--accent); 
-  margin-top: 5px; 
-  font-size: 22px; 
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-top: 15px;
 }
 
-.desc { 
-  margin-top: 18px; 
-  max-width: 600px; 
-  line-height: 1.6; 
-  color: var(--text-light); 
+.subtitle {
+  color: var(--accent);
+  margin-top: 5px;
+  font-size: 22px;
 }
 
-/* BUTTONS */
+.desc {
+  margin-top: 18px;
+  max-width: 600px;
+  line-height: 1.6;
+  color: var(--text-light);
+}
+
+
+/* ================================
+   BUTTONS
+================================= */
 .btn {
   padding: 12px 26px;
   border-radius: 30px;
@@ -124,7 +197,10 @@ body {
   color: var(--text);
 }
 
-/* SECTIONS */
+
+/* ================================
+   SECTIONS
+================================= */
 .section {
   padding: 100px 60px;
 }
@@ -142,7 +218,10 @@ body {
   margin-bottom: 8px;
 }
 
-/* ABOUT GRID */
+
+/* ================================
+   ABOUT SECTION
+================================= */
 .about-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -150,10 +229,9 @@ body {
 }
 
 
-/* ------------------------------------------- */
-/* SKILLS — 1st ROW : FRONTEND | BACKEND | DB */
-/* ------------------------------------------- */
-
+/* ================================
+   SKILLS
+================================= */
 .skills-top-row {
   margin-top: 30px;
   display: flex;
@@ -161,8 +239,7 @@ body {
   gap: 25px;
 }
 
-/* fixed width cards */
-.skills-top-row .skill-card {
+.skill-card {
   width: 260px;
   background: var(--card-bg);
   border: 1px solid var(--card-border);
@@ -187,10 +264,9 @@ body {
 }
 
 
-/* ------------------------------------------- */
-/* TOOLS SECTION — WRAPS TO NEXT LINE */
-/* ------------------------------------------- */
-
+/* ================================
+   TOOLS SECTION
+================================= */
 .tools-heading {
   margin-top: 40px;
   margin-bottom: 15px;
@@ -229,25 +305,21 @@ body {
 }
 
 
-/* ------------------------------------------- */
-/* HOBBIES CARD — last row */
-/* ------------------------------------------- */
-
+/* ================================
+   HOBBIES
+================================= */
 .skills-bottom-row {
   margin-top: 20px;
 }
 
 .skills-bottom-row .skill-card {
   width: 260px;
-  background: var(--card-bg);
-  padding: 22px;
-  border-radius: 16px;
-  border: 1px solid var(--card-border);
 }
 
 
-/* PROJECTS */
-/* PROJECTS SECTION */
+/* ================================
+   PROJECTS
+================================= */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -292,7 +364,9 @@ body {
 }
 
 
-/* CONTACT */
+/* ================================
+   CONTACT SECTION
+================================= */
 .input {
   width: 100%;
   padding: 14px;
@@ -303,8 +377,35 @@ body {
   margin-bottom: 15px;
 }
 
+.contact-info {
+  max-width: 650px;
+  margin-bottom: 40px;
+  color: var(--text-light);
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid var(--card-border);
+  line-height: 1.7;
+}
 
-/* FOOTER */
+.connect-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.email-highlight {
+  margin-top: 10px;
+  font-size: 16px;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+
+/* ================================
+   FOOTER
+================================= */
 .footer {
   padding: 25px;
   text-align: center;
@@ -313,13 +414,22 @@ body {
 }
 
 
-/* RESPONSIVE */
-@media(max-width: 900px) {
-  .hero { text-align: center; padding: 90px 20px; }
-  .skills-top-row { justify-content: center; }
-  .tools-flex { justify-content: center; }
-  .skills-bottom-row { display: flex; justify-content: center; }
-}
-.tools{
-  padding: 25px;
+/* ================================
+   RESPONSIVE UI
+================================= */
+@media (max-width: 900px) {
+  .hero {
+    text-align: center;
+    padding: 90px 20px;
+  }
+
+  .skills-top-row,
+  .tools-flex {
+    justify-content: center;
+  }
+
+  .skills-bottom-row {
+    display: flex;
+    justify-content: center;
+  }
 }

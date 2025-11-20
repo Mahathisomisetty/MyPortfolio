@@ -12,17 +12,34 @@
 
 <body>
   <!-- NAVBAR -->
-  <header class="navbar" data-aos="fade-down">
-    <div class="logo">Mahathi</div>
+  <header class="navbar">
+  <div class="logo">Mahathi</div>
 
-    <nav class="nav-links">
-      <button id="themeToggle" class="theme-btn">🌙</button>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <!-- Hamburger Icon (Mobile Only) -->
+  <div class="mobile-menu-icon" onclick="openMenu()">
+    ☰
+  </div>
+
+  <!-- Desktop Menu -->
+  <nav class="nav-links">
+    <button id="themeToggle" class="theme-btn">🌙</button>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- MOBILE SIDEBAR MENU -->
+  <div id="mobileMenu" class="mobile-nav">
+    <div class="close-btn" onclick="closeMenu()">✖</div>
+
+    <a href="#home" onclick="closeMenu()">Home</a>
+    <a href="#about" onclick="closeMenu()">About Me</a>
+    <a href="#projects" onclick="closeMenu()">My Work</a>
+    <a href="#contact" onclick="closeMenu()">Contact Me</a>
+  </div>
+</header>
+
 
   <!-- HERO SECTION -->
   <section id="home" class="hero" data-aos="fade-up">
@@ -199,19 +216,33 @@
 
   <!-- CONTACT SECTION -->
   <section id="contact" class="section">
-    <h3 class="label" data-aos="fade-right">CONTACT</h3>
-    <h2 class="section-title" data-aos="fade-left">Contact Me</h2>
+  
+  <h2 class="section-title" data-aos="fade-left">Get In Touch</h2>
 
-    <div class="contact-box" data-aos="zoom-in">
-      <form onsubmit="sendToWhatsApp(event)">
-  <input type="text" id="name" class="input" placeholder="Your Name" required />
-  <input type="email" id="email" class="input" placeholder="Your Email" required />
-  <textarea id="message" rows="4" class="input" placeholder="Your Message" required></textarea>
-  <button class="btn primary full">Submit</button>
-</form>
+  <!-- Contact Description -->
+  <div class="contact-info" data-aos="fade-up">
+    <h3 class="connect-title">Connect With Me</h3>
+    <p>
+      Thank you for visiting my portfolio! I am currently seeking exciting job opportunities 
+      in the web development field, as well as freelance projects where I can contribute my skills.
+    </p>
+    <p>
+    If you're looking for a web developer or have a project in mind — I’d love to connect with you!
+  Feel free to reach out through the form below or email me directly at:
+    </p>
+    <p class="email-highlight">📩 <strong>mahathisomisetty777@gmail.com</strong></p>
+  </div>
+  <h3 class="label" data-aos="fade-right">CONTACT</h3>
+  <div class="contact-box" data-aos="zoom-in">
+    <form onsubmit="sendToWhatsApp(event)">
+      <input type="text" id="name" class="input" placeholder="Your Name" required />
+      <input type="email" id="email" class="input" placeholder="Your Email" required />
+      <textarea id="message" rows="4" class="input" placeholder="Your Message" required></textarea>
+      <button class="btn primary full">Submit</button>
+    </form>
+  </div>
+</section>
 
-    </div>
-  </section>
 
   <!-- FOOTER -->
   <footer class="footer">© 2025 Mahathi • All Rights Reserved</footer>
@@ -235,6 +266,13 @@
   let whatsappURL = `https://wa.me/917036116350?text=${finalMessage}`;
 
   window.open(whatsappURL, "_blank");
+}
+function openMenu() {
+  document.getElementById("mobileMenu").style.right = "0";
+}
+
+function closeMenu() {
+  document.getElementById("mobileMenu").style.right = "-100%";
 }
 
   </script>
