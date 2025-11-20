@@ -320,3 +320,6 @@ body {
   .tools-flex { justify-content: center; }
   .skills-bottom-row { display: flex; justify-content: center; }
 }
+.tools{
+  padding: 25px;
+}

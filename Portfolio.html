@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mahathi Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="style.css" />
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 
 <body>
-
   <!-- NAVBAR -->
-  <header class="navbar">
+  <header class="navbar" data-aos="fade-down">
     <div class="logo">Mahathi</div>
 
     <nav class="nav-links">
       <button id="themeToggle" class="theme-btn">🌙</button>
-
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
@@ -23,207 +24,223 @@
     </nav>
   </header>
 
-  <!-- HERO / HOME SECTION -->
-<section id="home" class="hero">
-  <p class="tag">Hi, I am</p>
+  <!-- HERO SECTION -->
+  <section id="home" class="hero" data-aos="fade-up">
+    <p class="tag">Hi, I am</p>
 
-  <h1 class="title">Mahathi Somisetty</h1>
-  <h2 class="subtitle">MERN Stack Developer • Frontend Developer</h2>
+    <h1 class="title">Mahathi Somisetty</h1>
+    <h2 class="subtitle">MERN Stack Developer • Frontend Developer</h2>
 
-  <p class="desc">
-    I create responsive, user-friendly and scalable web applications using 
-    <strong>React, Node.js, Express, and MongoDB.</strong>
-    Passionate about building clean UI and seamless user experiences.
-  </p>
+    <p class="desc">
+      I create responsive, user-friendly and scalable web applications using
+      <strong>React, Node.js, Express, and MongoDB.</strong> Passionate about building clean UI and seamless user experiences.
+    </p>
 
-  <div class="hero-buttons">
-  <a href="#projects" class="btn primary">View My Work</a>
-  <a href="#contact" class="btn outline">Contact Me</a>
-
-  <!-- DOWNLOAD RESUME BUTTON -->
-  <a href="Mahathi'somisettyResume.pdf" download class="btn resume-btn">Download Resume</a>
-</div>
-
-</section>
-
- <!-- ABOUT SECTION -->
-
-<section id="about" class="section">
-  <h3 class="label">INTRODUCTION</h3>
-  <h2 class="section-title">About Me</h2>
-
-  <div class="about-grid">
-    <div>
-      <p>I am a MERN Stack developer passionate about building modern UI and powerful full-stack applications.</p>
-      <p>I love transforming ideas into functional, dynamic and scalable apps.</p>
+    <div class="hero-buttons" data-aos="zoom-in">
+      <a href="#projects" class="btn primary">View My Work</a>
+      <a href="#contact" class="btn outline">Contact Me</a>
+      <a href="Mahathi'somisettyResume.pdf" download class="btn resume-btn">Download Resume</a>
     </div>
-  </div>
+  </section>
 
-  <!-- SKILLS ROW (FRONTEND | BACKEND | DATABASE) -->
-  <div class="skills-top-row">
+  <!-- ABOUT SECTION -->
+  <section id="about" class="section">
+    <h3 class="label" data-aos="fade-right">INTRODUCTION</h3>
+    <h2 class="section-title" data-aos="fade-left">About Me</h2>
 
-    <div class="skill-card">
-      <h4>Frontend</h4>
-      <ul>
-        <li>HTML5</li>
-        <li>CSS3</li>
-        <li>JavaScript</li>
-        <li>React.js</li>
-        <li>Redux Toolkit</li>
-        <li>Bootstrap</li>
-        <li>Tailwind CSS</li>
-      </ul>
+    <div class="about-grid" data-aos="fade-up">
+      <div>
+        <p>I am a MERN Stack Developer with a strong passion for building modern web applications.</p>
+        <p>I enjoy creating clean, responsive, and user-friendly interfaces. My focus is on developing powerful full-stack solutions using MongoDB, Express, React, and Node.js.</p>
+        <p>
+          I love turning ideas into real, functional, and scalable applications. I continuously learn new tools and technologies to improve my development skills. My goal is to build products that deliver
+          great user experiences and real-world impact.
+        </p>
+      </div>
     </div>
 
-    <div class="skill-card">
-      <h4>Backend</h4>
-      <ul>
-        <li>Node.js</li>
-        <li>Express.js</li>
-        <li>REST APIs</li>
-      </ul>
+    <!-- SKILLS ROW -->
+    <h3 class="tools-heading">Skills</h3>
+
+    <div class="skills-top-row">
+      <div class="skill-card" data-aos="fade-right">
+        <h4>Frontend</h4>
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript</li>
+          <li>React.js</li>
+          <li>Redux Toolkit</li>
+          <li>Bootstrap</li>
+          <li>Tailwind CSS</li>
+        </ul>
+      </div>
+
+      <div class="skill-card" data-aos="fade-up">
+        <h4>Backend</h4>
+        <ul>
+          <li>Node.js</li>
+          <li>Express.js</li>
+          <li>REST APIs</li>
+        </ul>
+      </div>
+
+      <div class="skill-card" data-aos="fade-left">
+        <h4>Databases</h4>
+        <ul>
+          <li>MongoDB</li>
+          <li>SQL</li>
+        </ul>
+      </div>
     </div>
-
-    <div class="skill-card">
-      <h4>Databases</h4>
-      <ul>
-        <li>MongoDB</li>
-        <li>SQL</li>
-      </ul>
+    <br>
+    <br>
+    <!-- TOOLS -->
+    <div class="tools">
+       <h3>Tools I know</h3>
     </div>
+   <div class="tools-flex">
 
-  </div>
-
-  <!-- TOOLS SECTION -->
-  <h3 class="tools-heading">Tools I Know</h3>
-<div class="tools-flex">
-  <div class="tool-box">
+  <div class="tool-box" data-aos="fade-up">
     <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" title="HTML">
   </div>
 
-  <div class="tool-box">
+  <div class="tool-box" data-aos="fade-right">
     <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" title="CSS">
   </div>
 
-  <div class="tool-box">
+  <div class="tool-box" data-aos="fade-left">
     <img src="https://cdn-icons-png.flaticon.com/512/5968/5968672.png" title="Bootstrap">
   </div>
 
-  <div class="tool-box">
+  <div class="tool-box" data-aos="zoom-in">
     <img src="https://cdn-icons-png.flaticon.com/512/919/919853.png" title="Docker">
   </div>
 
-  <div class="tool-box">
+  <div class="tool-box" data-aos="fade-up-right">
     <img src="https://cdn-icons-png.flaticon.com/512/2111/2111288.png" title="GitHub">
   </div>
 
-  <div class="tool-box">
+  <div class="tool-box" data-aos="fade-up-left">
     <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" title="JavaScript">
   </div>
 
-  <div class="tool-box">
+  <div class="tool-box" data-aos="flip-left">
     <img src="https://cdn-icons-png.flaticon.com/512/919/919825.png" title="Node.js">
+  </div>
+
+  <div class="tool-box" data-aos="flip-right">
+    <img src="https://cdn-icons-png.flaticon.com/512/919/919836.png" title="MongoDB">
   </div>
 </div>
 
-  <!-- HOBBIES CARD -->
-  <div class="skills-bottom-row">
-    <div class="skill-card">
-      <h4>Hobbies</h4>
-      <ul>
-        <li>UI/UX Design</li>
-        <li>Coding</li>
-        <li>Tech Videos</li>
-        <li>Learning Tools</li>
-      </ul>
+    <!-- HOBBIES -->
+    <div class="skills-bottom-row">
+      <div class="skill-card" data-aos="zoom-in">
+        <h4>Hobbies</h4>
+        <ul>
+          <li>UI/UX Design</li>
+          <li>Coding</li>
+          <li>Tech Videos</li>
+          <li>Learning Tools</li>
+        </ul>
+      </div>
     </div>
-  </div>
+  </section>
+
   <!-- PROJECTS SECTION -->
-<section id="projects" class="section">
-  <h3 class="label">PORTFOLIO</h3>
-  <h2 class="section-title">My Projects</h2>
+  <section id="projects" class="section">
+    <h2 class="section-title" data-aos="fade-left">My Projects</h2>
 
-  <div class="projects-grid">
+    <div class="projects-grid">
+      <div class="project-card" data-aos="fade-right">
+        <!-- <img src="https://via.placeholder.com/400x220" class="project-img" /> -->
+        <div class="project-content">
+          <h4>Job Finder App</h4>
+          <p>
+  A full MERN stack Job Portal featuring secure authentication, role-based access 
+  for recruiters and job seekers, job posting, job search filters, application tracking, 
+  and a complete recruiter dashboard. Includes JWT authentication and REST API integration.
+</p>
 
-    <!-- Project 1 -->
-    <div class="project-card">
-      <img src="https://via.placeholder.com/400x220" class="project-img" alt="Job Finder App">
-      <div class="project-content">
-        <h4>Job Finder App</h4>
-        <p>
-          A full MERN stack Job Portal with authentication, recruiter dashboard, 
-          job posting and job application features.
-        </p>
-        <a href="https://github.com/Mahathisomisetty/JobPortal" target="_blank" class="btn outline full">
-          GitHub Repo
-        </a>
+          <a href="#" class="btn outline full">GitHub Repo</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-aos="fade-up">
+        <!-- <img src="https://via.placeholder.com/400x220" class="project-img" /> -->
+        <div class="project-content">
+          <h4>Student Management System</h4>
+          <p>
+  A complete student management platform with attendance tracking, fee management, 
+  student CRUD operations, and admin controls. Built using React, RTK Query, Node.js 
+  and MongoDB for seamless real-time data updates and an efficient workflow.
+</p>
+
+          <a href="#" class="btn outline full">GitHub Repo</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-aos="fade-left">
+        <!-- <img src="https://via.placeholder.com/400x220" class="project-img" /> -->
+        <div class="project-content">
+          <h4>Portfolio Website</h4>
+          <p>
+  A responsive personal portfolio website built using HTML, CSS, JavaScript, and 
+  AOS animations. Includes dark/light mode, animated sections, projects showcase, 
+  smooth scrolling, and a clean modern UI for presenting skills and work.
+</p>
+
+          <a href="#" class="btn outline full">GitHub Repo</a>
+        </div>
       </div>
     </div>
+  </section>
 
-    <!-- Project 2 -->
-    <div class="project-card">
-      <img src="https://via.placeholder.com/400x220" class="project-img" alt="Student Management System">
-      <div class="project-content">
-        <h4>Student Management System</h4>
-        <p>
-          Attendance, fee tracking, student CRUD, admin panel, and React RTK Query integration.
-        </p>
-        <a href="https://github.com/Mahathisomisetty/Student-attendance-system/tree/SMS-BE-RTK" target="_blank" class="btn outline full">
-          GitHub Repo
-        </a>
-      </div>
-    </div>
-
-    <!-- Project 3 -->
-    <div class="project-card">
-      <img src="https://via.placeholder.com/400x220" class="project-img" alt="Portfolio Website">
-      <div class="project-content">
-        <h4>Portfolio Website</h4>
-        <p>
-          Fully responsive portfolio built with HTML, CSS, and JavaScript with smooth animations.
-        </p>
-        <a href="https://github.com/yourusername/portfolio" target="_blank" class="btn outline full">
-          GitHub Repo
-        </a>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-</section>
-
-  <!-- CONTACT -->
+  <!-- CONTACT SECTION -->
   <section id="contact" class="section">
-    <h3 class="label">CONTACT</h3>
-    <h2 class="section-title">Contact Me</h2>
+    <h3 class="label" data-aos="fade-right">CONTACT</h3>
+    <h2 class="section-title" data-aos="fade-left">Contact Me</h2>
 
-    <div class="contact-box">
-      <form>
-        <input type="text" placeholder="Your Name" class="input" required>
-        <input type="email" placeholder="Your Email" class="input" required>
-        <textarea placeholder="Your Message" rows="4" class="input" required></textarea>
-        <button class="btn primary full">Submit</button>
-      </form>
+    <div class="contact-box" data-aos="zoom-in">
+      <form onsubmit="sendToWhatsApp(event)">
+  <input type="text" id="name" class="input" placeholder="Your Name" required />
+  <input type="email" id="email" class="input" placeholder="Your Email" required />
+  <textarea id="message" rows="4" class="input" placeholder="Your Message" required></textarea>
+  <button class="btn primary full">Submit</button>
+</form>
+
     </div>
-    
   </section>
 
   <!-- FOOTER -->
-  <footer class="footer">
-    © 2025 Mahathi • All Rights Reserved
-  </footer>
+  <footer class="footer">© 2025 Mahathi • All Rights Reserved</footer>
 
-  <!-- THEME SWITCH SCRIPT -->
+  <!-- DARK MODE -->
   <script>
     const themeBtn = document.getElementById("themeToggle");
-
     themeBtn.addEventListener("click", () => {
       document.body.classList.toggle("light");
       themeBtn.textContent = document.body.classList.contains("light") ? "☀️" : "🌙";
     });
+    function sendToWhatsApp(event) {
+  event.preventDefault();
+
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let message = document.getElementById("message").value;
+
+  let finalMessage = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+
+  let whatsappURL = `https://wa.me/917036116350?text=${finalMessage}`;
+
+  window.open(whatsappURL, "_blank");
+}
+
   </script>
 
+  <!-- AOS SCRIPT -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ duration: 900, once: true, easing: "ease-out" });</script>
 </body>
 </html>
