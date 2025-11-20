@@ -48,7 +48,7 @@ body {
 
 
 /* ================================
-   NAVBAR
+   NAVBAR (DESKTOP)
 ================================= */
 .navbar {
   padding: 18px 60px;
@@ -69,8 +69,14 @@ body {
   color: var(--text);
 }
 
+/* Show desktop nav items */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
 .nav-links a {
-  margin-left: 25px;
   color: var(--text);
   text-decoration: none;
   font-weight: 500;
@@ -86,7 +92,6 @@ body {
   border: none;
   font-size: 22px;
   cursor: pointer;
-  margin-right: 15px;
   color: var(--text);
 }
 
@@ -96,7 +101,7 @@ body {
 ================================= */
 .mobile-menu-icon {
   display: none;
-  font-size: 26px;
+  font-size: 28px;
   cursor: pointer;
   color: var(--text);
 }
@@ -126,13 +131,13 @@ body {
 
 .close-btn {
   align-self: flex-end;
-  font-size: 28px;
+  font-size: 30px;
   cursor: pointer;
   color: #ff4e4e;
   margin-bottom: 20px;
 }
 
-/* Show hamburger & hide desktop nav */
+/* Show hamburger & hide desktop nav only on mobile */
 @media (max-width: 900px) {
   .nav-links {
     display: none;
